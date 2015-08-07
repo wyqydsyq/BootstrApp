@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Loading</title>
+		<style id="stylesheet" rel="stylesheet"></style>
+		<script id="templates"></script>
+		<script>
+			// load modules
+			var Promise = require('bluebird'),
+				fs = require('fs-extended'),
+				_ = require('lodash'),
+				$ = require('jquery'),
+				BootstrApp = require('./lib/bootstrapp.js');
+
+			// launch JS when DOM ready
+			$(function(){
+				window.app = new BootstrApp('BootstrApp', window);
+			})
+		</script>
+	</head>
+	<body>
+		<div id="loading">
+			<i class="fa fa-spinner fa-spin"></i>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "BootstrApp",
+  "version": "1.0.0",
+  "description": "BootstrApp is an Electron starter kit preconfigured to compile LESS stylesheets and .ejs/JST templates, along with a few other basic libraries to kick-start development of your next great app! Launch with `electron ./`",
+  "main": "launch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Damon Poole <pyrokinetiq@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-prebuilt": "^0.28.3"
+  },
+  "dependencies": {
+    "bluebird": "^2.9.32",
+    "fs-extended": "^0.2.0",
+    "jquery": "^2.1.4",
+    "less": "^2.5.1",
+    "lodash": "^3.10.0"
+  }
+}
