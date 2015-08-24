@@ -22,7 +22,7 @@
 
 					window.document.title = app.name;
 					window.$('#loading').fadeOut();
-					$('body').append(window.JST['hello.ejs']({name: name}));
+					$('body').append(window.JST['hello.ejs']({name: app.name}));
 				});
 			})
 		</script>
