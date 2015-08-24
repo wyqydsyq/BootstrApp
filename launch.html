@@ -5,8 +5,8 @@
 		<script id="templates"></script>
 		<script>
 			// load modules
-			var Promise = require('bluebird'),
-				EventEmitter = require('events').EventEmitter,
+			var EventEmitter = require('events').EventEmitter,
+				Promise = require('bluebird'),
 				fs = require('fs-extended'),
 				_ = require('lodash'),
 				$ = require('jquery'),
@@ -15,9 +15,14 @@
 			// launch JS when DOM ready
 			$(function(){
 				var app = new BootstrApp('BootstrApp', window);
-				
+
+				// the app emits a 'ready' event when all of the jobs are complete
 				app.on('ready', function(){
 					console.log(app.name + ' loading complete');
+
+					window.document.title = app.name;
+					window.$('#loading').fadeOut();
+					$('body').append(window.JST['hello.ejs']({name: name}));
 				});
 			})
 		</script>
