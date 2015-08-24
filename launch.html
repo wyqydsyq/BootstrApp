@@ -6,6 +6,7 @@
 		<script>
 			// load modules
 			var Promise = require('bluebird'),
+				EventEmitter = require('events').EventEmitter,
 				fs = require('fs-extended'),
 				_ = require('lodash'),
 				$ = require('jquery'),
@@ -13,7 +14,11 @@
 
 			// launch JS when DOM ready
 			$(function(){
-				window.app = new BootstrApp('BootstrApp', window);
+				var app = new BootstrApp('BootstrApp', window);
+				
+				app.on('ready', function(){
+					console.log(app.name + ' loading complete');
+				});
 			})
 		</script>
 	</head>
